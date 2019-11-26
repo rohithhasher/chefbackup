@@ -1,0 +1,33 @@
+{
+  "name": "csvnrepo",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+	  "s3backup" : {
+		"svn-data" : {
+			"folder" : "/opt/csvn/data/",
+			"frequency" : "daily"
+		}
+	  },
+	  
+	  "newrelic" : {"license_key":"cf560903ea9242ec33508d44107e2af60be8341f"},
+
+	  "svn" : {
+			"home" : "/opt/csvn",
+			"svnrepo" : "/opt/csvn/data"
+	  },
+
+	  "runa" : {
+		"aws_access_key" : "AKIAJRZDPR3NET2EIAMA",
+		"aws_secret_access_key" : "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",
+		"availability_zone" : "us-east-1a",
+		"svnrepo" : {
+		  "device_aws" : "/dev/sdf",
+		  "device_sys" : "/dev/xvdf",
+		  "volume_id" : "vol-52b54f2e"
+		}
+	  }
+  },
+  "description": "Systems that serve CSVN repositories. Sets up S3 backup cron jobs, mounts file system and starts CSVN server",
+  "run_list": ["recipe[cron]", "recipe[aws]", "recipe[s3backup]", "recipe[clouddev]", "recipe[clouddev::csvnrepo]"]
+}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<style>
+		.icon {background-image: url('img/collab-icons.png');width: 90px;height:30px;text-indent:-9999px;font-size:24px;display:inline;display:inline-block;*zoom:1;vertical-align:middle;background-repeat:no-repeat;}
+		.desc {display:inline;display:inline-block;*zoom:1;width: 70%;vertical-align:middle;margin-left:10px;font-size:12px;}
+		
+		ul {list-style-type: none;padding:0;margin:0;}
+		h4 {margin-bottom: 20px;padding: 10px 4px;}
+		
+		.collab-group-box:HOVER {background: #efefef;border-radius: 3px;}
+		.collab-item:HOVER {background: #e0e0e0;cursor:pointer; border-radius: 7px;}
+		
+		.collab-group-box h4, .collab-item{
+			  -webkit-transition: all 0.6s ease-in-out;
+			  -moz-transition: all 0.6s ease-in-out;
+			  -o-transition: all 0.6s ease-in-out;
+			  transition: all 0.6s ease-in-out;
+		}
+		
+		.collab-group-box {border:1px solid #ccc;padding:10px;margin: 20px 0;}
+		table {text-align: left;font-size:0.9em;}
+		table td, table th {padding:5px 10px;}
+		
+		.jira-icon {background-position: 0 -32px;}
+		.conf-icon {background-position: 0 -97px;}
+		.greenhopper-icon {background-position: 0 -200px;}
+		.sonar-icon {background-position: 0 -267px;}
+		.jenkins-icon {background-position: 0 -334px;}
+		.bonfire-icon {background-position: 0 -398px;}
+		.subversion-icon {background-position: 0 -466px;}
+		.git-icon {background-position: 0 -505px;}
+		.fisheye-icon {background-position: 0 -544px;}
+		.crucible-icon {background-position: 0 -575px;}
+		.aws-icon {background-position: 0 -62px;}
+		.aws-vde-icon {background-position: 0 -165px;}
+		.aws-instance-icon {background-position: 0 -233px;}
+		.aws-qa-icon {background-position: 0 -603px;}
+		.aws-instances-icon {background-position: 0 -300px;}
+		.aws-perf-icon {background-position: 0 -640px;}
+		.aws-monitoring-icon {background-position: 0 -366px;}
+		.newrelic-icon {background-position: 0 -670px;}
+		.splunk-icon {background-position: 0 -710px;}
+		.cloudability-icon {background-position: 0 -752px;}
+		.bugsnag-icon {background-position: 0 -795px;}
+
+		.crowd-icon {background-position: 0 -437px;}
+		.eum-icon {background-position: 0 -122px;}
+		
+		.title span{font-size:12px;}
+		.title a{font-size:32px;}
+		.title {text-align:right; padding: 5px 0;}
+		
+		h1,h2,h3,h4,h5,h6, .title a {font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;}
+		
+		
+		.footer {font-size:12px;padding: 0 0 30px;}
+		.collab-item {padding: 10px 0;position:relative;}
+		body {font-size: 0.8em;}
+		
+		.coming-soon {opacity: 0.2;filter: alpha(opacity=30);}
+		.coming-soon:HOVER {opacity: 0.8;}
+		.coming-soon:HOVER::AFTER {content:"COMING SOON !"; color: red; position: absolute;top:-10px; left:-5px;font-size: bold;font-size:14px; font-weight:bold;}
+		a, a:HOVER {text-decoration:none;color:inherit;}
+		
+	</style>
+</head>
+<body>
+
+	<div class="container" style="margin-top:15px;">
+
+	<div class="header row">
+		<div class="span4">
+			<img src="../img/hma_com_logo.gif"/>
+		</div>
+		<div class="span6 offset2 title">
+			<a href="https://www.devcloud.hma.com">DevCloud</a><br/>
+			<span>Reusable development infrastructure for HMA teams</span>
+		</div>
+	</div>
+	
+	<hr style="margin:0;"/>
+	
+	<div class="row">
+		<div class="span6">
+			<div class="collab-group-box">
+				<h4>Project / Issue Tracking &amp; Documentation</h4>
+				
+				<div class="collab-item">
+					<a href="https://issues.devcloud.hma.com/">
+						<i class="icon jira-icon"></i>
+						<div class="desc">
+							Collaborative tracking, prioritization, and reporting for bug reports, feature requests, risks, outages, and tasks/chores 
+						</div>
+					</a>
+				</div>
+				
+				<div class="collab-item">
+					<a href="https://docs.devcloud.hma.com/">
+						<i class="icon conf-icon"></i>
+						<div class="desc">
+							Wiki collaboration tool for teams to create, share and discuss rich content – docs, files, ideas, specs, diagrams, mockups, anything.
+						</div>
+					</a>
+				</div>
+				
+				<a href="https://issues.devcloud.hma.com/secure/RapidStart.jspa">
+				<div class="collab-item">
+						<i class="icon greenhopper-icon"></i>
+						<div class="desc">
+							Agile Project planning and collaboration tool.
+						</div>
+				</div>
+				</a>
+			</div>
+			
+			<div class="collab-group-box">
+				<h4>Quality Management</h4>
+				<a href="https://metrics.devcloud.hma.com/">
+				<div class="collab-item">
+				<i class="icon sonar-icon"></i>
+				<div class="desc">
+					Code quality metrics, reports and management
+				</div>
+				</div>
+				</a>
+				
+				<a href="https://ci.devcloud.hma.com/">
+				<div class="collab-item">
+				<i class="icon jenkins-icon"></i>
+				<div class="desc">
+					Continuous integration, deployment, releases
+				</div>
+				</div>
+				</a>
+				
+				<a href="https://issues.devcloud.hma.com/secure/SessionNavigator.jspa">
+				<div class="collab-item">
+				<i class="icon bonfire-icon"></i>
+				<div class="desc">
+					Rapid bug reporting for web based apps
+				</div>
+				</div>
+				</a>
+			
+			</div>
+			
+			<div class="collab-group-box">
+				<h4>Source Code Control &amp; Review</h4>
+				
+				<div class="collab-item">
+					<a href="https://svn.devcloud.hma.com/svn/">
+						<i class="icon subversion-icon"></i>
+						<div class="desc">
+							Enterprise-class centralized version control
+						</div>
+						</div>
+					</a>
+				
+<!--
+				<div class="collab-item coming-soon">
+				<i class="icon git-icon"></i>
+				<div class="desc">
+					High performance distributed version control
+				</div>
+				</div>
+	-->
+			
+				<a href="https://code.devcloud.hma.com/">
+				<div class="collab-item">
+				<i class="icon fisheye-icon"></i>
+				<div class="desc">
+					Browse, search and track source repositories
+				</div>
+				</div>
+				</a>
+				
+				<a href="https://code.devcloud.hma.com/cru">
+				<div class="collab-item">
+				<i class="icon crucible-icon"></i>
+				<div class="desc">
+					Peer code review workspaces
+				</div>
+				</div>
+				</a>
+			
+			</div>
+			
+		</div>
+		
+		<div class="span6">
+			<div class="collab-group-box">
+				<h4>On Demand Environments</h4>
+				
+				<a href="https://hma.signin.aws.amazon.com/console">
+					<div class="collab-item">
+					<i class="icon aws-icon"></i>
+					<div class="desc">
+						HMA AWS Console Sign-In
+					</div>
+					</div>
+				</a>
+
+				<div class="collab-item coming-soon">
+				<i class="icon aws-vde-icon"></i>
+				<div class="desc">
+					Virtual Dev Boxes
+				</div>
+				</div>
+				
+				<a href="machines.html#dev">
+				<div class="collab-item">
+				<i class="icon aws-instance-icon"></i>
+				<div class="desc">
+					Dev / Preview Environments
+				</div>
+				</div>
+				</a>
+				
+				<a href="machines.html#qa">
+				<div class="collab-item">
+				<i class="icon aws-qa-icon"></i>
+				<div class="desc">
+					QA Environments
+				</div>
+				</div>
+				</a>
+				
+				<a href="machines.html#test">
+				<div class="collab-item">
+				<i class="icon aws-perf-icon"></i>
+				<div class="desc">
+					Performance Testing Environments
+				</div>
+				</div>
+				</a>
+				
+				<a href="machines.html#prod">
+				<div class="collab-item">
+				<i class="icon icon-smaller aws-instances-icon"></i>
+				<div class="desc">
+					Production Environments
+				</div>
+				</div>
+				</a>
+				
+				<a href="https://rpm.newrelic.com/">
+				<div class="collab-item">
+				<i class="icon newrelic-icon"></i>
+				<div class="desc">
+					Monitoring &amp; Notification
+				</div>
+				</div>
+				</a>
+				
+				<a href="http://splunk.devcloud.hma.com/">
+				<div class="collab-item">
+				<i class="icon splunk-icon"></i>
+				<div class="desc">
+					Log analysis
+				</div>
+				</div>
+				</a>
+			
+				<a href="https://cloudability.com/">
+				<div class="collab-item">
+				<i class="icon cloudability-icon"></i>
+				<div class="desc">
+					Cloud cost and usage analytics
+				</div>
+				</div>
+				</a>
+
+				<a href="https://bugsnag.com/">
+				<div class="collab-item">
+				<i class="icon bugsnag-icon"></i>
+				<div class="desc">
+					Real time bug analysis
+				</div>
+				</div>
+				</a>
+
+			</div>
+			
+			<div class="collab-group-box">
+				<h4>User Management</h4>
+				
+				<a href="https://crowd.devcloud.hma.com/crowd/">
+				<div class="collab-item">
+				<i class="icon crowd-icon"></i>
+				<div class="desc">
+					Single Sign On for HMA DevCloud
+				</div>
+				</div>
+				</a>
+			
+				<div class="collab-item coming-soon">
+				<i class="icon eum-icon"></i>
+				<div class="desc">
+					Enterprise User Management
+				</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	</div>
+	<hr/>
+	<div class="footer">
+		<span>Last Updated - 03/19/2013</span>
+	</div>
+	
+	
+</body>
+</html>

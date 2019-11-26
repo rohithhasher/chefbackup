@@ -1,0 +1,29 @@
+<!DOCTYPE "html">
+<html>
+<head>
+	<title>Environment Listings</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container" style="margin-top:15px;">
+
+	<div class="header">
+		
+		{% for instance_type in ['prod','qa','dev','test'] %}
+		<h4>{{instance_type|upper}} Instances <a href="#{{instance_type}}" name="{{instance_type}}" id="{{instance_type}}">link</a></h4>
+		<table class="table table-striped">
+		<tr><th>Name</th><th>App</th><th>Environment</th></tr>
+		{% for instance in instances %}
+			{% if instance.tags.env == instance_type %}
+			<tr>
+				<td>{{ instance.tags.Name }}</td>
+				<td>{{ instance.tags.app }}</td>
+				<td>{{instance.tags.env}}</td>
+			</tr>
+			{% endif %}
+		{% endfor %}
+		</table>
+		{% endfor %}
+
+</body>
+</head>

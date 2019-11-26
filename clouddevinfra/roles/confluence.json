@@ -1,0 +1,29 @@
+{
+  "name": "confluence",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+	  "s3backup":{
+		"conf-data" : {
+			"folder" : "/var/atlassian/application-data/confluence",
+			"frequency"   : "daily"
+		}
+	  },
+	  "confluence":{
+			"home":"/var/atlassian/application-data/confluence",
+			"device":"/dev/xvda"
+	  },
+	  
+	  "newrelic" : {"license_key":"cf560903ea9242ec33508d44107e2af60be8341f"},
+	  
+	  "runa":{
+		"aws_access_key":"ASIAUI57BI4XTDDYE3HC",
+		"aws_secret_access_key":"NqPPfljALyxeGaynjX8dhhsSbHbcDD+ny5/I+Vlb",
+		"device":"/dev/sda1",
+		"volume_id":"vol-09e0b8be687b6d037",
+		"availability_zone":"ap-northeast-2c"
+	  }
+  },
+  "description": "Systems that serve confluence. Sets up S3 backup cron jobs, mounts file system and starts confluence server",
+  "run_list": ["recipe[cron]", "recipe[aws]", "recipe[s3backup]", "recipe[clouddev]", "recipe[clouddev::confluence]"]
+}

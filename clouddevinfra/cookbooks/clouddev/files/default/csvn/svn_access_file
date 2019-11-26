@@ -1,0 +1,30 @@
+[groups]
+admin = admin
+hashedin = 
+kickdrum = 
+mavice = 
+
+[/]
+* = r
+@admin = rw
+@hashedin = rw
+@kickdrum = rw
+
+[NLPTeneo:/]
+
+[PatientManagement:/]
+
+[Platform:/]
+
+[Dashboards:/]
+@mavice = rw
+
+[MAP2:/]
+* = r
+
+[MAP3:/]
+* = r
+
+[MCS:/]
+* = r
+

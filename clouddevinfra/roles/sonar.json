@@ -1,0 +1,28 @@
+{
+  "name": "sonar",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "Systems that serve Sonar. Sets up S3 backup cron jobs, mounts file system and starts Sonar server",
+  "run_list": ["recipe[cron]", "recipe[aws]", "recipe[clouddev]", "recipe[clouddev::sonar]", "recipe[s3backup]"],
+  
+  "default_attributes": {
+	  "s3backup":{
+		
+	  },
+	  
+	  "java":{
+	  	"install_flavor" : "oracle",
+	  	"java_home" : "/opt/java",
+	  	"oracle": {
+	  		"accept_oracle_download_terms" : "true"
+	  	}
+	  },
+	  
+	  "newrelic" : {"license_key":"cf560903ea9242ec33508d44107e2af60be8341f"},
+	  
+	  "runa":{
+		"aws_access_key":"AKIAJRZDPR3NET2EIAMA",
+		"aws_secret_access_key":"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"
+	  }
+   }
+}

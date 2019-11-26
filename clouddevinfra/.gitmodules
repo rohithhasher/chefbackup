@@ -1,0 +1,12 @@
+[submodule "cookbooks/aws"]
+	path = cookbooks/aws
+	url = https://github.com/opscode-cookbooks/aws
+[submodule "cookbooks/cron"]
+	path = cookbooks/cron
+	url = https://github.com/opscode-cookbooks/cron
+[submodule "cookbooks/apt"]
+	path = cookbooks/apt
+	url = https://github.com/opscode-cookbooks/apt
+[submodule "cookbooks/java"]
+	path = cookbooks/java
+	url = https://github.com/opscode-cookbooks/java

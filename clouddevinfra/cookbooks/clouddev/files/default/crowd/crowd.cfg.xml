@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<application-configuration>
+  <setupStep>complete</setupStep>
+  <setupType>install.new</setupType>
+  <buildNumber>582</buildNumber>
+  <properties>
+    <property name="crowd.server.id">BXAB-H6SI-GIO3-SYQI</property>
+    <property name="hibernate.c3p0.acquire_increment">1</property>
+    <property name="hibernate.c3p0.idle_test_period">100</property>
+    <property name="hibernate.c3p0.max_size">30</property>
+    <property name="hibernate.c3p0.max_statements">0</property>
+    <property name="hibernate.c3p0.min_size">0</property>
+    <property name="hibernate.c3p0.timeout">30</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.password">cloudcrowdhm4</property>
+    <property name="hibernate.connection.url">jdbc:mysql://crowddb.cntkrckvonyb.us-east-1.rds.amazonaws.com:3306/crowddb?autoReconnect=true&amp;characterEncoding=utf8&amp;useUnicode=true</property>
+    <property name="hibernate.connection.username">crowd</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+    <property name="hibernate.setup">true</property>
+    <property name="license">AAABNg0ODAoPeNpdkEFLw0AQhe/7Kxa8mpBNo9TCgm0SbKBJrKmo4GXcTpuF7KbsbqL996Y1heJhTu99b97MzRtuadH2lEU0YLPwYRZGNK42NAxYSBK0wsiDk63msWm/t58zGrdKoRESGlJ06gtNuXu1aCxnQUDEyeSDcLJH7kyHJDYIJz4Bh/wU6jHmsYjErXaDrwCFfIkKtKNVDfWYsJICtcXN8YBnR1zmefoSZ/PVBUxzkA2vz6RvB/KxVuCLVpG0h6Y77+Q7aCySwakdatAC05+DNMdLl8nYpTR70NL+MUuExtU0Bw17VDj0mlvbDvc6tLc008InVVrwYbwwYtO76ZRUaHo0WcIX7/OFt7yvMu8pKyde9bHOyHjKoK6y5JoahatKnW6kkg635LkzogaL/7/2CwB2jTIwLAIUASnoW5PIqYZdLlv9mNzx3rIDj7UCFBjbHrYTbEQVa7nj2M7mHiMFZ+IuX02ff</property>
+  </properties>
+</application-configuration>

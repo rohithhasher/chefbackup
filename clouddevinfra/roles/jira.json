@@ -1,0 +1,29 @@
+{
+  "name": "jira",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+	  "s3backup":{
+		"jira-data" : {
+			"folder" : "/var/atlassian/application-data/jira",
+			"frequency"   : "daily"
+		}
+	  },
+	  "jira":{
+			"home":"/var/atlassian/application-data/jira",
+			"device":"/dev/xvdh"
+	  },
+	  
+	  "newrelic" : {"license_key":"cf560903ea9242ec33508d44107e2af60be8341f"},
+	  
+	  "runa":{
+		"aws_access_key":"AKIAJRZDPR3NET2EIAMA",
+		"aws_secret_access_key":"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",
+		"device":"/dev/sdh",
+		"volume_id":"vol-13801068",
+		"availability_zone":"us-east-1a"
+	  }
+  },
+  "description": "Systems that serve Jira. Sets up S3 backup cron jobs, mounts file system and starts Jira server",
+  "run_list": ["recipe[cron]", "recipe[aws]", "recipe[s3backup]", "recipe[clouddev]", "recipe[clouddev::jira]"]
+}

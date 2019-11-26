@@ -1,0 +1,36 @@
+{
+  "name": "jenkins",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "Systems that serve Jira. Sets up S3 backup cron jobs, mounts file system and starts Jira server",
+  "run_list": ["recipe[cron]", "recipe[aws]", "recipe[clouddev]", "recipe[clouddev::jenkins]", "recipe[s3backup]"],
+  
+  "default_attributes": {
+	  "s3backup":{
+		"jenkins-jobs" : {
+			"folder" : "/mnt/jenkins/jobs",
+			"frequency"   : "daily"
+		},
+		
+		"jenkins-config" : {
+			"folder" : "/var/lib/jenkins",
+			"frequency"   : "daily"
+		}
+	  },
+
+           "newrelic" : {"license_key":"cf560903ea9242ec33508d44107e2af60be8341f"},
+	  
+	  "java":{
+	  	"install_flavor" : "oracle",
+	  	"java_home" : "/opt/java",
+	  	"oracle": {
+	  		"accept_oracle_download_terms" : "true"
+	  	}
+	  },
+	  
+	  "runa":{
+		"aws_access_key":"AKIAJRZDPR3NET2EIAMA",
+		"aws_secret_access_key":"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"
+	  }
+   }
+}

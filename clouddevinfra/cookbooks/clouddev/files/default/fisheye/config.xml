@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config control-bind="127.0.0.1:8059" version="1.0" admin-hash="EA6F17F5AF94384B8A827064DC282AB6">
+  <!-- see example-config.xml and config.xsd for more documentation -->
+
+  <license SID="BPO3-J0YW-SA57-6Z8Q">
+    <crucible>AAABIA0ODAoPeNptkNFqgzAUhu/zFIFdR4xdnRUC69RRmdoxO4awmzQ9q4GaSqKyvv3UusnGLgIh5
+      3zn/05u3uCAc6ix42Jq+9TzbykOwh12bOqgEIzQsm7kWbFAt0LuT/Du46jjp5YPryjQMF5C3gAbG
+      GKviHOHgrNquGgyXgFbK1O2FVc4l+pYIjENshIpQBnYXWoY+4JtmkYvQbxOvvEo5fLE+MRbZuDvS
+      25KOEhliXOFZhXW6BZQD6gGFFcCos9a6sssRu1B7Cc9a6s96O3HqwFtGKFoq49cSXMdthlDYjX39
+      zqyg2tKHmWsPySh3mppuy7KQXeg45A9LIoN8dIiI4/uMiPFU7ZA0559NYnDX9hU+d/0udWi3xX+f
+      u0XLE2N0DAsAhRdnGKoOG3zWZ/wlg8dvQz4klhsfAIUb7yS0UdYmKb/8rkYJge2U3IaIM4=X02ei
+    </crucible>
+    <fisheye>Evaluation</fisheye>
+  </license>
+  <web-server site-url="https://code.devcloud.hma.com">
+    <http bind=":8060" proxy-port="443" proxy-scheme="https" proxy-host="code.devcloud.hma.com" />
+  </web-server>
+  <api enabled="false" />
+  <smtp sendEmailsAsActioner="false" starttls="false" from="fisheye@devcloud.hma.com" host="localhost" debug="false" />
+  <security allow-anon="false" allow-cru-anon="false" allow-user-lists-anon="false" enable-user-lists="true">
+    <built-in>
+      <signup enabled="false" />
+    </built-in>
+    <crowd auto-add="false" resync="true" refreshExistingUsers="true" sso-enabled="false" resyncPeriod="1 hour" jiraInstance="false">
+      <crowd-properties>#Thu Sep 27 11:36:52 UTC 2012
+        application.password=fisheyehm4
+        application.name=fisheye
+        crowd.server.url=https\://crowd.devcloud.hma.com/crowd
+      </crowd-properties>
+      <resyncGroupsList>
+        <group name="fisheye-users" />
+      </resyncGroupsList>
+    </crowd>
+    <admins>
+      <system-admins>
+        <user>admin</user>
+      </system-admins>
+    </admins>
+    <avatar>
+      <disabled />
+    </avatar>
+    <emailVisibility visibility="visibleToUsers" />
+  </security>
+  <properties>
+    <property name="com.atlassian.upm.log.PluginSettingsAuditLogService:log:upm_audit_log_v2"
+      value="%23java.util.List%0A%7B%22username%22%3A%22FishEye%22%2C%22date%22%3A1348738964617%2C%22i18nKey%22%3A%22upm.auditLog.upm.startup%22%2C%22entryType%22%3A%22UPM_STARTUP%22%2C%22params%22%3A%5B%5D%7D%0A%7B%22username%22%3A%22FishEye%22%2C%22date%22%3A1348738202365%2C%22i18nKey%22%3A%22upm.auditLog.upm.startup%22%2C%22entryType%22%3A%22UPM_STARTUP%22%2C%22params%22%3A%5B%5D%7D%0A%7B%22username%22%3A%22FishEye%22%2C%22date%22%3A1348671421178%2C%22i18nKey%22%3A%22upm.auditLog.upm.startup%22%2C%22entryType%22%3A%22UPM_STARTUP%22%2C%22params%22%3A%5B%5D%7D" />
+    <property name="com.atlassian.applinks.applinks-plugin:build" value="10" />
+    <property name="com.atlassian.upm.atlassian-universal-plugin-manager-plugin:build" value="1" />
+    <property name="com.atlassian.upm:notifications:notification-update" value="%23java.util.List%0A" />
+    <property name="com.atlassian.upm:notifications:notification-edition.mismatch" value="%23java.util.List%0A" />
+    <property name="com.atlassian.upm:notifications:notification-evaluation.expired" value="%23java.util.List%0A" />
+    <property name="com.atlassian.upm:notifications:notification-evaluation.nearlyexpired" value="%23java.util.List%0A" />
+    <property name="com.atlassian.upm:notifications:notification-maintenance.expired" value="%23java.util.List%0A" />
+    <property name="com.atlassian.upm:notifications:notification-maintenance.nearlyexpired" value="%23java.util.List%0A" />
+    <property name="com.atlassian.upm:notifications:dismissal-evaluation.nearlyexpired" value="%23java.util.List%0A" />
+    <property name="com.atlassian.upm:notifications:dismissal-maintenance.nearlyexpired" value="%23java.util.List%0A" />
+  </properties>
+  <repository-defaults>
+    <linker />
+    <allow />
+    <tarball enabled="false" maxFileCount="0" />
+    <security allow-anon="true" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="true">
+      <required-groups />
+      <required-write-groups />
+    </security>
+    <text-indexer enabled="true" />
+    <watches enabled="true" />
+    <commit-message-syntax syntax="plain" />
+    <changeset-discussions enabled="true" />
+  </repository-defaults>
+
+  <repository name="NLPTeneo" description="NLPTeneo" store-diff="true" enabled="true">
+    <svn url="https://svn.devcloud.hma.com/svn/hma" path="nlp">
+      <auth username="qa" password="qa123hm4" />
+      <symbolic auto-rules="true" />
+    </svn>
+    <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false">
+      <required-groups />
+      <required-write-groups />
+    </security>
+  </repository>
+  <check-for-updates />
+  <database type="mysql">
+    <connection dialect="org.hibernate.dialect.MySQL5InnoDBDialect" driver="com.mysql.jdbc.Driver" jdbcurl="jdbc:mysql://crucibledb.cntkrckvonyb.us-east-1.rds.amazonaws.com:3306/fisheye"
+      password="cruciblehm4" username="crucible" maxPoolSize="20" minPoolSize="5" driverSource="bundled" />
+    <parameters>useUnicode=true
+      characterEncoding=UTF8
+      connectionCollation=UTF8_bin
+    </parameters>
+  </database>
+  <snippet />
+  <repository-management repositories-root="/mnt/fisheye/managed-repos" />
+</config>

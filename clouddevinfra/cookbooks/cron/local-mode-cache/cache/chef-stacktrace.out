@@ -1,0 +1,18 @@
+Generated at 2019-11-26 12:50:57 +0000
+Chef::Exceptions::MissingRole: The expanded run list includes nonexistent roles: confluence
+/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.5.17/lib/chef/node.rb:453:in `expand!'
+/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.5.17/lib/chef/policy_builder/expand_node_object.rb:155:in `expand_run_list'
+/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.5.17/lib/chef/policy_builder/expand_node_object.rb:139:in `build_node'
+/opt/chef/embedded/lib/ruby/2.6.0/forwardable.rb:230:in `build_node'
+/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.5.17/lib/chef/client.rb:460:in `build_node'
+/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.5.17/lib/chef/client.rb:273:in `run'
+/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.5.17/lib/chef/application.rb:320:in `run_with_graceful_exit_option'
+/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.5.17/lib/chef/application.rb:296:in `block in run_chef_client'
+/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.5.17/lib/chef/local_mode.rb:42:in `with_server_connectivity'
+/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.5.17/lib/chef/application.rb:279:in `run_chef_client'
+/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.5.17/lib/chef/application/base.rb:330:in `run_application'
+/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.5.17/lib/chef/application.rb:69:in `run'
+/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.5.17/lib/chef/application/solo.rb:59:in `run'
+/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-bin-15.5.17/bin/chef-solo:24:in `<top (required)>'
+/usr/bin/chef-solo:166:in `load'
+/usr/bin/chef-solo:166:in `<main>'
